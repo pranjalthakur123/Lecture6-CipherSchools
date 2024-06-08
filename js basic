@@ -1,0 +1,63 @@
+// // About var let and const keyword
+var x=15;
+{
+    let x=10;
+    console.log(x);
+}
+console.log(x);
+
+// // Arrow function 
+// const y=(x,y)=>x+y;
+// console.log(y(4,5));
+
+// // ... spread operator in js
+const q1 = ["Mon","Tue","Wed"];
+const q2 = ["ron","Tue","Wed"];
+const q3 = ["con","Tue","Wed"];
+const year = [...q1,...q2,...q3];
+console.log(year);
+
+const mvalue=[1,32,43,12,43,54,23];
+let max=Math.max(...mvalue);
+console.log(max);
+
+
+// // for of loop
+const number=[12,32,43,5];
+let sum=0;
+for(let num of number){
+    sum +=num;
+}
+console.log(sum);
+
+// //Map function in js
+const f= new Map([
+    ["apple",100],
+    ["mango",200],
+    ["mango",300],
+]);
+console.log(f);
+console.log(f.get("mango"));
+
+//Classes in js
+
+class Car{
+    constructor(name,mgyear){
+        this.name=name;
+        this .mgyear=mgyear;
+    }
+}
+const myCar1 = new Car("Supre",2000);
+const myCar2 = new Car("ZeeVagen",2003);
+console.log(myCar1,myCar2);
+
+
+// Symbol Primitive type..................
+const person = {
+    firstName :"Pranjal",
+    lastName :"Thakur",
+    age : 22,
+};
+let id=Symbol("id");
+person[id] =12213775;
+console.log(person);
